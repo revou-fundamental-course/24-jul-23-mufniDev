@@ -587,14 +587,20 @@ label
   height: 180px;
   background: none;
 }
+.package-detail
+{
+  display: flex;
+  flex-direction: column;
+  transform: translateX(10px);
+}
 .package-detail b
 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .package-detail span
 {
   margin-top: .5em;
-  font-size: 14px;
+  font-size: .9rem;
   color: gray;
 }
 .package-icon
@@ -610,12 +616,6 @@ label
   float: left;
   border-radius: 50%;
 }
-.package-detail
-{
-  display: flex;
-  flex-direction: column;
-  transform: translateX(10px);
-}
 
 /* CLOSING CONTAINER */
 .closing-container
@@ -626,11 +626,15 @@ label
   align-items: center;
   gap: 1em;
   text-align: center;
-  font-size: 15px;
 }
 .closing-container p
 {
+  font-size: 1rem;
   max-width: 88%;
+}
+.closing-container h1
+{
+  font-size: 2.5rem;
 }
 
 /* FOOTER */
@@ -649,7 +653,7 @@ footer p
 /* Media query */
 
 /* Laptop */
-@media (min-width: 998px)
+@media (max-width: 1024px)
 {
   .menu-items {
     display: flex;
@@ -677,6 +681,18 @@ footer p
   .package-container 
   {
     gap: 10%;
+  }
+  .closing-container h1 
+  {
+    font-size: 2.5rem;
+  }
+  .closing-container p 
+  {
+    font-size: 1rem;
+  }
+  .package-detail b
+  {
+  font-size: 1.1rem;
   }
 
 }
@@ -707,6 +723,14 @@ footer p
   {
     gap: 5%;
   }
+  .package-detail b
+  {
+  font-size: 1.1rem;
+  }
+  .closing-container h1 
+  {
+    font-size: 1.5rem;
+  }
 }
 
 /* Phone */
@@ -735,5 +759,17 @@ footer p
   .package-container 
   {
     gap: 10%;
+  }
+  .package-detail b
+  {
+  font-size: 1rem;
+  }
+  .closing-container h1 
+  {
+    font-size: 1.5rem;
+  }
+  .closing-container p
+  {
+    font-size: 1rem;
   }
 }
