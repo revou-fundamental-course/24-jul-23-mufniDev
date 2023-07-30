@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing page</title>
+  
+ <!--+-+-+-+-- ICONS -+-+-+-+-->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  
+<!--+-+-+-+-- FONT --+-+-+-+-+-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</head>
+<body>
+  
+  <!-- NAVBAR -->
+  <header>
+    <div class="brand">
+      HappyTravel
+    </div>
+    <div class="burger" onclick="openMenu()">
+      <i class="fi fi-sr-menu-burger"></i>
+    </div>
+    
+    <ul class="menu-items">
+      <li><a href="#">Home</a></li>
+      <li><a href="#our-package">Our package</a></li>
+      <li><a href="#call">Call Us</a></li>
+    </ul>
+  </header>
+  
+  <!-- MENU FOR MOBILE -->
+  <div class="menu-wrapper">
+    <div class="menu">
+      <div class="brand menu-brand">HappyTravel<i class="fi fi-rr-city"></i></div>
+      
+      <!-- ITEM MENU -->
+      <ul class="menu-container">
+        <li>
+          <div>
+            <i class="fi fi-sr-house-chimney"></i>
+            <a onclick="openMenu()" href="#">Home</a> 
+          </div>
+          <i class="fi fi-rr-arrow-circle-right badge-icon"></i>
+          </li>
+        <li>
+          <div>
+            <i class="fi fi-sr-box-open"></i>
+            <a onclick="openMenu()" href="#our-package">Our package</a> 
+          </div>
+          <i class="fi fi-rr-arrow-circle-right badge-icon"></i>
+          </li>
+        <li>
+          <div>
+            <i class="fi fi-sr-phone-call"></i>
+            <a onclick="openMenu()" href="#call">Call Us</a>
+          </div>
+          <i class="fi fi-rr-arrow-circle-right badge-icon"></i>
+          </li>
+      </ul>
+      
+      <!-- CLOSE MENU -->
+      <div onclick="openMenu()" class="close-btn">
+        <span class="ping"></span>
+        <i class="fi fi-sr-angle-circle-left"></i>
+      </div>
+    </div>
+  </div>
+  <!-- END MENU FOR MOBILE -->
+  
+  <!-- MAIN PAGE -->
+  <main>
+    <div class="hero">
+      <h5><b>Happy Travel Agent's</b></h5>
+      <p>Your happines is our hapines</p>
+    </div>
+    
+<!--+-+-+-+- SECTION TOP -+-+-+-+-->
+    <section class="img-form">
+      <div class="opini">
+<!--+-+-+-+- SLIDER -+-+-+-+-->
+   <div class="slide-wrapper">
+     <div class="slide">
+      <img class="slide-item s-active" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUd0RR-linlhpEX4UfqGPOsqUUWH_ehuDCXQ&usqp=CAU" alt="" />
+        <img class="slide-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMFckIrBfzTpbVgECsIVQDWT-lCFltvo8kaQ&usqp=CAU" alt="" />
+        <img class="slide-item" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg7wgwWXV0QFNIXZezcfGJKxi1UtJT_L2ttA&usqp=CAU" alt="" />
+    </div> 
+   </div>
+        
+        <p>"Liburan menjadi lebih menyenangkan bersama HappyTravel"</p>
+        <div class="profile">
+          <div class="profile-img">
+            <i style="transform: translateY(2px)" class="fi fi-rr-user"></i>
+          </div>
+          <div data-profesi="Ibu rumah tangga" class="profile-nama">
+           <b>Vania putri</b>
+          </div>
+        </div>
+        <hr width="90px" />
+        <div class="info">
+          <b>Berikut merupakan keunggulan layanan yang di sediakan oleh HappyTravel: </b>
+          <div>
+            <div class="num">1</div>
+            <p>Paket Liburan yang telah Disesuaikan</p>
+          </div>
+          <div>
+            <div class="num">2</div>
+            <p>Pengetahuan Lokal yang Mendalam</p>
+          </div>
+          <div>
+            <div class="num">3</div>
+            <p>Dukungan dan Bantuan Selama Perjalanan</p>
+          </div>
+        </div>  
+      </div>
+      <div class="form">
+        <div class="form-content">
+          <div data-deskripsi="Sales akan menghubungi anda 1×24 jam setelah data kami terima" class="form-title">
+            <b>Contact Us</b>
+          </div>
+          
+          <form action="">
+            <div>
+              <label for="nama">Username</label>
+              <input onkeyup="usernameValidasi()" minlength="8" maxlength="30" type="text" class="" name="nama" placeholder="Orang" id="nama" value="" />
+              <span class="alert"></span>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input onkeyup="validEmail()" type="email" name="email" placeholder="example@mail.com" id="email" value="" required />
+              <span class="email-alert">E-mail tidak valid</span>
+            </div>
+            <div>
+            
+            <label>What are you interested in?</label>
+            
+            <select name="select" id="select" required>
+             <option value="">Your choice</option>
+             <option value="Pilihan1">Paket liburan</option>
+             <option value="Pilihan1">Pelayanan pelanggan</option>
+             <option value="Pilihan1">Paket liburan infinite </option>
+            </select>
+            <label class="arrow-down" for="select"><i class="fi fi-rr-caret-down"></i></label>
+            </div>
+            <button class="button" type="submit" disabled>Kirim</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    
+<!--+-+-- SECTION Our Package --+-+-->
+    <section id="our-package" class="our-package">
+      <div class="our-title">Our Package</div>
+      
+      <div class="package-container">
+        <div class="package-item">
+          <i class="fi fi-rr-bulb package-icon"></i>
+          <div class="package-detail">
+            <b>Bali</b>
+            <span>Wisata di bali, kunjungi cagar budaya, dan keindahan alam nya</span>
+          </div>
+        </div>
+        <div class="package-item">
+          <i class="fi fi-rr-bulb package-icon"></i>
+          <div class="package-detail">
+            <b>Isekai</b>
+            <span>Kunjungi tempat tempat yang menarik, dan rasakan keindahan nya</span>
+          </div>
+        </div>
+        <div class="package-item">
+          <i class="fi fi-rr-bulb package-icon"></i>
+          <div class="package-detail">
+            <b>Konoha</b>
+            <span>Nikmati pesona keindahan alam yang memanjakan mata antum</span>
+          </div>
+        </div>
+      </div>
+      <div class="package-container">
+        <div class="package-item">
+          <i class="fi fi-sr-circle-star package-icon"></i>
+          <div class="package-detail">
+            <b>Bikini bottom</b>
+            <span>Wisata kuliner ke krusty crab atau rasakan sensasi bermain di glove world</span>
+          </div>
+        </div>
+        <div class="package-item">
+          <i class="fi fi-sr-circle-star package-icon"></i>
+          <div class="package-detail">
+            <b>Wakanda</b>
+            <span>Kunjungi tempat yang super futuristik dan rasakan keajaiban vibranium</span>
+          </div>
+        </div>
+        <div class="package-item">
+          <i class="fi fi-sr-circle-star package-icon"></i>
+          <div class="package-detail">
+            <b>Atlantis</b>
+            <span>Nikmati pesona gelembung yang paling lama ada dan tidak pecah selama 1 juta tahun</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <hr style="width:99%;border-top: 1px solid lightgray;margin-bottom: 3em">
+    
+<!--+-+-- SECTION CLOSING --+-+-->
+    <section class="closing-container">
+      <h1>Closing paragraph</h1>
+      <p>Happy travel membawa kepercayaan dan kenyamanan dalam merencanakan liburan tak terlupakan. Dengan pengetahuan dan pelayanan mereka, setiap momen berharga dapat dihabiskan dengan maksimal. Mereka adalah mitra yang andal untuk petualangan tanpa batas.</p>
+      
+       <button style="margin-top:2em;width:200px" id="call" class="button" type="submit">Call Us</button>
+    </section>
+    
+    <hr style="width:99%;border-top: 1px solid lightgray;margin-bottom: 2em;margin-top: 3em">
+    
+  </main>
+  <!-- END MAIN PAGE -->
+  
+  <!-- FOOTER -->
+  <footer>
+    <h4><b>HappyTravel</b></h4>
+    <br>
+    <p>Terms of Service Privacy Policy © 2023 HappyTravel</p>
+  </footer>
+
+<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
